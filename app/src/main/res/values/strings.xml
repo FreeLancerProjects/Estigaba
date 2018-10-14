@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">إستجابة</string>
+    <string-array name="array_estigaba">
+        <item>صل على محمد</item>
+        <item>سبحان الله وبحمده</item>
+        <item>الحمد لله</item>
+
+    </string-array>
+    <string name="unit_id">ca-app-pub-3411251647705287/6052894659</string>
+</resources>

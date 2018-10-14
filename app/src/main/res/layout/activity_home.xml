@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    android:background="@drawable/home"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0 دقيقة"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="220dp"
+
+                />
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isb_max="30"
+                app:isb_min="0"
+                app:isb_progress="0"
+                app:isb_seek_smoothly="true"
+                app:isb_show_tick_marks_type="none"
+                app:isb_show_tick_texts="true"
+                app:isb_thumb_color="@color/white"
+                app:isb_thumb_size="25dp"
+                app:isb_show_indicator="rounded_rectangle"
+                app:isb_track_background_color="#cdcdcd"
+                app:isb_track_background_size="3dp"
+                app:isb_track_progress_color="@color/progress"
+                app:isb_track_progress_size="4dp"
+                android:layout_marginTop="20dp"
+                app:isb_indicator_color="@color/white"
+                app:isb_indicator_text_color="@color/colorPrimary"
+                app:isb_tick_texts_color="@color/white"
+
+                />
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="ضبط وقت التنبية"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="تذكير بصيام اثنين وخميس"
+                    android:layout_alignParentRight="true"
+                    />
+                <com.zcw.togglebutton.ToggleButton
+                    android:id="@+id/toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    app:tbSpotColor="@color/white"
+                    app:tbAnimate="true"
+                    app:tbOffColor="#cdcdcd"
+                    app:tbOnColor="@color/on"
+                    app:tbAsDefaultOn="false"
+                    android:layout_alignParentLeft="true"
+
+                    />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="وَالذَّاكِرِينَ اللَّهَ كَثِيرًا وَالذَّاكِرَاتِ"
+                android:layout_marginBottom="10dp"
+                />
+
+
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                android:layout_centerInParent="true"
+                ads:adUnitId="@string/unit_id"
+
+                >
+            </com.google.android.gms.ads.AdView>
+
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</ScrollView>
